@@ -1,0 +1,17 @@
+{#- bhtml:begin -#}
+{#- BlendHtml compiler: vendor/bin/bhtml -#}
+{#- Compiler-managed. Changes will be overwritten. -#}
+{%- set __DIR__ = '.' -%}
+{#- Comment or uncomment on demand. Survives recompilation. -#}
+{% extends '@blendhtml/layout.html.twig' %}
+{#- bhtml:end -#}
+
+{% block js %}
+    {{ parent() }}
+{% endblock %}
+
+{% block css %}
+    {{ parent() }}
+    {{ tailwind(_bhtml.page) }}
+    {{ asset('fontAwesome') }}
+{% endblock %}

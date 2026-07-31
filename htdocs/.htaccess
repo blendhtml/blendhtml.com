@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# If the requested filename refers to an existing file or directory, do not redirect.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect all other requests to index.php and maintain the query string
+RewriteRule ^ index.php [QSA,L]

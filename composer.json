@@ -1,0 +1,25 @@
+{
+    "name": "blendhtml/skeleton",
+    "autoload": {
+        "psr-4": {
+            "BlendHtml\\Pages\\": "BlendHtml/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Philipp Nikolajev",
+            "email": "it-consulting@nikolajev.ee",
+            "homepage": "https://nikolajev.ee",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "bin": [
+        "bin/bhtml"
+    ],
+    "keywords": [],
+    "require": {
+        "blendhtml/blendhtml": "^0.1.0"
+    }
+}

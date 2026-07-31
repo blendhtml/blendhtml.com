@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirect requests to the htdocs/ directory
+RewriteCond %{REQUEST_URI} !^/htdocs/
+RewriteCond %{DOCUMENT_ROOT}/htdocs%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/htdocs%{REQUEST_URI} -d
+RewriteRule ^(.*)$ /htdocs/$1 [L]
+
+# If the requested resource does not exist as a file or directory, route it to index.php inside htdocs
+RewriteCond %{DOCUMENT_ROOT}/htdocs%{REQUEST_URI} !-f
+RewriteCond %{DOCUMENT_ROOT}/htdocs%{REQUEST_URI} !-d
+RewriteRule ^(.*)$ /htdocs/index.php [L]
