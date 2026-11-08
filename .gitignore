@@ -3,3 +3,6 @@ vendor
 .env
 /logs
 /git-push.sh
+
+/_scripts/
+/_ai/_scripts/
